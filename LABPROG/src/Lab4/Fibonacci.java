@@ -5,6 +5,11 @@ Série de Fibonacci
  */
 
 package Lab4;
+
+/**
+ *
+ * @author andecio
+ */
 public class Fibonacci {
     private int atual = 0, anterior = 0;
     
@@ -14,6 +19,13 @@ public class Fibonacci {
 	 O termo n a ser mostrado.
 	 @return O termo atual da progressão de Fibonacci que vai ser o termo solicitado.
 	 */
+
+    /**
+     *
+     * @param elementos
+     * @return
+     */
+
     
 	public int termoFibonacci(int elementos) {
 		for (int i = 0; i < elementos; i++) {
@@ -33,6 +45,12 @@ public class Fibonacci {
 	 A quantidade de termos a serem gerados.
 	 @return Os termos "n" da progressão de Fibonacci.
 	 */
+
+    /**
+     *
+     * @param n
+     */
+
         
 	public void geraTermoFibo(int n){
 		if (n <= 0){

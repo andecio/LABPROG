@@ -9,6 +9,11 @@ Explorando o mundo das séries, Progressão aritmética
 import Lab4.Fibonacci;
 import Lab4.ProgressaoAritmetica;
 import java.util.Scanner;
+
+/**
+ *
+ * @author andecio
+ */
 public class ExplorandoOMundoDasSeries {
     int primeiro, razao;
 	boolean paCriada = false, fiboCriada = false;
@@ -17,6 +22,11 @@ public class ExplorandoOMundoDasSeries {
 	/* Métodos
 	   Mostra o menu de interação com o usuário
 	 */
+
+    /**
+     *
+     */
+
 
 	public void menu() {
 		int opcao;
@@ -78,13 +88,26 @@ public class ExplorandoOMundoDasSeries {
 	 Cria uma Progressão de Fibonacci.
 	 @return Uma Progressão de Fibonacci.
 	 */
+
+    /**
+     *
+     * @param primeiro
+     * @param razao
+     * @return
+     */
+
         
         public Object criarPa(int primeiro, int razao) {
 	ProgressaoAritmetica pa = new ProgressaoAritmetica(primeiro, razao);
 	paCriada = true;
 	return pa;
 	}
-	public Object criarFibonacci() {
+
+    /**
+     *
+     * @return
+     */
+    public Object criarFibonacci() {
 		Fibonacci fibo = new Fibonacci();
 		fiboCriada = true;
 		return fibo;
@@ -94,6 +117,12 @@ public class ExplorandoOMundoDasSeries {
 	 Mostra um termo de uma Progressão aritmética.
 	 @return O termo da Progressão aritmética solicitado pelo usuário. 
 	 */
+
+    /**
+     *
+     * @return
+     */
+
         
 	public int verTermoPa() {
 		if (paCriada == true) {
@@ -113,6 +142,12 @@ public class ExplorandoOMundoDasSeries {
 	 Mostra um termo de uma Progressão de Fibonacci.
 	 @return O termo da Progressão de Fibonacci solicitado pelo usuário. 
 	 */
+
+    /**
+     *
+     * @return
+     */
+
         
 	public int verTermoFibonacci() {
 		if (fiboCriada == true) {
@@ -132,6 +167,11 @@ public class ExplorandoOMundoDasSeries {
 	/*
 	 Mostra a Progressão de aritmética e a Progressão de Fibonacci.
 	 */
+
+    /**
+     *
+     */
+
         
 	public void mostrarSeries(){
 		if (paCriada == true && fiboCriada == true){
@@ -153,6 +193,12 @@ public class ExplorandoOMundoDasSeries {
 	/*
 	 Cria um objeto da classe de Explorar o mundo das séries para testar. 
 	 */
+
+    /**
+     *
+     * @param args
+     */
+
         
 	public static void main(String[] args) {
 		ExplorandoOMundoDasSeries j1 = new ExplorandoOMundoDasSeries();

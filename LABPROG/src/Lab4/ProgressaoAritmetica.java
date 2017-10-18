@@ -5,6 +5,11 @@ Progressão Aritmética
  */
 
 package Lab4;
+
+/**
+ *
+ * @author andecio
+ */
 public class ProgressaoAritmetica extends java.lang.Object {
     private int primeiro, razao, atual, termo;
 	
@@ -16,6 +21,13 @@ public class ProgressaoAritmetica extends java.lang.Object {
 	 A razão da progressao aritmetica.
 	 */
 
+    /**
+     *
+     * @param primeiro
+     * @param razao
+     */
+
+
 	public ProgressaoAritmetica(int primeiro, int razao) {
 		this.primeiro = primeiro;
 		this.razao = razao;
@@ -25,6 +37,12 @@ public class ProgressaoAritmetica extends java.lang.Object {
         Recupera a razão da progressão aritmética.
 	@return a razão da progressão aritmética.
 	 */
+
+    /**
+     *
+     * @return
+     */
+
         
 	public int getRazao() {
 		return razao;
@@ -34,6 +52,12 @@ public class ProgressaoAritmetica extends java.lang.Object {
 	 Calcula o primeiro termo da progressão aritmética.
 	 @return O valor atual da progressão aritmética.
 	 */
+
+    /**
+     *
+     * @return
+     */
+
         
 	public int primeiro() {
 		atual = primeiro;
@@ -44,6 +68,12 @@ public class ProgressaoAritmetica extends java.lang.Object {
 	 Calcula o proximo termo da progressão aritmética.
 	 @return O próximo elemento da progressão aritmética.
 	 */
+
+    /**
+     *
+     * @return
+     */
+
         
 	public int proximo() {
 		int proximo;
@@ -58,6 +88,13 @@ public class ProgressaoAritmetica extends java.lang.Object {
 	 O termo n a ser mostrado.
 	 @return O termo atual da progressão aritmética que vai ser o termo solicitado.
 	 */
+
+    /**
+     *
+     * @param n
+     * @return
+     */
+
         
 	public int termo(int n) {
 		if (n <= 0) {
@@ -75,6 +112,13 @@ public class ProgressaoAritmetica extends java.lang.Object {
 	 A quantidade de termos a serem gerados.
 	 @return Os termos "n" da progressão aritmética.
 	 */
+
+    /**
+     *
+     * @param n
+     * @return
+     */
+
         
 	public java.lang.String geraTermos(int n) {
 		String transformada;
