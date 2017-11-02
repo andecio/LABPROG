@@ -7,17 +7,29 @@ import Lab5.Sala;
 import org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
+
+/**
+ *
+ * @author andecio
+ */
 public class TestaSala {
        private Sala sala;
 	private final int NUM_LINHAS = 10;
 	private final int NUM_COLUNAS = 10;
 
-	@Before
+    /**
+     *
+     * @throws Exception
+     */
+    @Before
 	public void criaObjetos() throws Exception {
 		sala = new Sala(NUM_LINHAS, NUM_COLUNAS);
 	}
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testaCriaSala() {
 		try {
 			new Sala(-1, 10);
@@ -90,7 +102,10 @@ public class TestaSala {
 		}
 	}
 	
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testaDimensoesDaSala() {
 		Assert.assertTrue(sala.getNumPosicoesHorizontais() == 10);
 		Assert.assertTrue(sala.getNumPosicoesVerticais() == 10);
@@ -103,14 +118,21 @@ public class TestaSala {
 		Assert.assertTrue(sala.getNumPosicoesVerticais() == 9);
 	}
 
-	@Test
+    /**
+     *
+     * @throws Exception
+     */
+    @Test
 	public void testaIsVazia() throws Exception {
 		Assert.assertTrue(sala.isVazia());
 		Assert.assertTrue(sala.inserirObstaculo(0, 0));
 		Assert.assertFalse(sala.isVazia());
 	}
 
-	@Test
+    /**
+     *
+     */
+    @Test
 	public void testaVerificaPosicaoValida() {
 		Assert.assertTrue(sala.posicaoValida(0, 0));
 		Assert.assertTrue(sala.posicaoValida(9, 9));
@@ -127,7 +149,11 @@ public class TestaSala {
 		Assert.assertFalse(sala.posicaoValida(-1, 10));
 	}
 
-	@Test
+    /**
+     *
+     * @throws Exception
+     */
+    @Test
 	public void testaInserirObstaculos() throws Exception {
 		Assert.assertTrue(sala.inserirObstaculo(0, 0));
 		Assert.assertFalse(sala.isPosicaoLivre(0, 0));
@@ -141,7 +167,11 @@ public class TestaSala {
 		Assert.assertFalse(sala.inserirObstaculo(0, -1));
 	}
 
-	@Test
+    /**
+     *
+     * @throws Exception
+     */
+    @Test
 	public void testaSetPosicao() throws Exception {
 		Assert.assertTrue(sala.setPosicao(0, 0, Sala.OCUPADO));
 		Assert.assertFalse(sala.isPosicaoLivre(0, 0));
@@ -161,7 +191,11 @@ public class TestaSala {
 		Assert.assertFalse(sala.setPosicao(0, -1, Sala.OCUPADO));
 	}
 
-	@Test
+    /**
+     *
+     * @throws Exception
+     */
+    @Test
 	public void testaIsPosicaoLivre() throws Exception {
 		Assert.assertTrue(sala.isPosicaoLivre(0, 0));
 		Assert.assertTrue(sala.isPosicaoLivre(9, 9));
@@ -189,7 +223,11 @@ public class TestaSala {
 		}
 	}
 	
-	@Test
+    /**
+     *
+     * @throws Exception
+     */
+    @Test
 	public void testaEquals() throws Exception{
 		Sala outraSala = null;
 		try {

@@ -3,15 +3,38 @@
 *  Alunos: Andécio Araujo , Kelvin Vandick
  */
 package Lab5;
+
+/**
+ *
+ * @author andecio
+ */
 public class Sala {
+
+    /**
+     *
+     */
     final public static char OCUPADO = 'O';
-	final public static char LIVRE = ' ';
-	final public static char OBSTACULO = 'X';
+
+    /**
+     *
+     */
+    final public static char LIVRE = ' ';
+
+    /**
+     *
+     */
+    final public static char OBSTACULO = 'X';
 	private char[][] sala;
 	private int numerodelinhas;
 	private int numerodecolunas;
 	
-	public Sala(int NUM_LINHAS, int NUM_COLUNAS) throws Exception {
+    /**
+     *
+     * @param NUM_LINHAS
+     * @param NUM_COLUNAS
+     * @throws Exception
+     */
+    public Sala(int NUM_LINHAS, int NUM_COLUNAS) throws Exception {
 		if (NUM_LINHAS <= 0 || NUM_COLUNAS <= 0) {
 			throw new Exception("Dados errados para a criacao da sala. A dimensao tem que ser maior que 0");
 		}

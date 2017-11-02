@@ -3,6 +3,11 @@
 *  Alunos: Andécio Araujo , Kelvin Vandick
  */
 package Lab5;
+
+/**
+ *
+ * @author andecio
+ */
 public class Robo {
     private int energia, passos, linhaRobo, colunaRobo;
 	private Sala salaDoRobo;

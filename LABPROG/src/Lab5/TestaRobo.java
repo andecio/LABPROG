@@ -9,6 +9,11 @@ import org.junit.*;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+
+/**
+ *
+ * @author andecio
+ */
 public class TestaRobo {
     private Robo robo;
 	private Sala sala;
@@ -16,13 +21,21 @@ public class TestaRobo {
 	private final int NUM_LINHAS = 10;
 	private final int NUM_COLUNAS = 10;
 	
-	@Before
+    /**
+     *
+     * @throws Exception
+     */
+    @Before
 	public void criaObjetos() throws Exception {
 		sala = new Sala(NUM_LINHAS, NUM_COLUNAS);
 		robo = new Robo(ENERGIA, sala);
 	}
 	
-	@Test
+    /**
+     *
+     * @throws Exception
+     */
+    @Test
 	public void testaCriaRobo() throws Exception {
            
 		try {
@@ -62,20 +75,32 @@ public class TestaRobo {
 		}
 	}
 		
-		@Test
+    /**
+     *
+     * @throws Exception
+     */
+    @Test
 		public void testaPosicaoInicialRobo() throws Exception {
 			Assert.assertTrue(robo.getPosicao()[0] == 0 && robo.getPosicao()[1] == 0);
 			Assert.assertFalse(sala.isPosicaoLivre(0, 0));
 		}
 		
-		@Test
+    /**
+     *
+     * @throws Exception
+     */
+    @Test
 		public void testaSalaComObstaculoPosicaoInicial() throws Exception {
 			sala.inserirObstaculo(0, 0);
 			robo = new Robo(ENERGIA, sala);
 			Assert.assertTrue(robo.getPosicao()[0] == 0 && robo.getPosicao()[1] == 1);
 		}
 		
-		@Test
+    /**
+     *
+     * @throws Exception
+     */
+    @Test
 		public void testaMovimentos() throws Exception {
 			Assert.assertFalse(robo.andarParaCima());
 			Assert.assertFalse(robo.andarParaEsquerda());
@@ -91,7 +116,11 @@ public class TestaRobo {
 			Assert.assertTrue(robo.getPosicao()[0] == 0 && robo.getPosicao()[1] == 0);
 		}
 		
-		@Test
+    /**
+     *
+     * @throws Exception
+     */
+    @Test
 		public void testaObstaculos() throws Exception {
 			sala.inserirObstaculo(1, 0);
 			sala.inserirObstaculo(0, 2);
@@ -117,7 +146,11 @@ public class TestaRobo {
 			Assert.assertTrue(robo.getPassos() == 4 && robo.getEnergia() == 6);
 		}
 		
-		@Test
+    /**
+     *
+     * @throws Exception
+     */
+    @Test
 		public void testaPosicaoEnergiaPassos() throws Exception {
 			Assert.assertTrue(robo.andarParaBaixo());
 			Assert.assertTrue(robo.getPosicao()[0] == 1 && robo.getPosicao()[1] == 0);
@@ -155,7 +188,11 @@ public class TestaRobo {
 			Assert.assertFalse(robo.andarParaDireita());
 		}
 		
-		@Test
+    /**
+     *
+     * @throws Exception
+     */
+    @Test
 		public void testaNasQuinas() throws Exception {
 			sala = new Sala(3,3);
 			robo = new Robo(ENERGIA, sala);
@@ -170,7 +207,11 @@ public class TestaRobo {
 			Assert.assertFalse(robo.andarParaEsquerda());
 		}
 		
-		@Test
+    /**
+     *
+     * @throws Exception
+     */
+    @Test
 		public void testaEquals() throws Exception {
 			Sala sala2 = new Sala(NUM_LINHAS, NUM_COLUNAS);
 			Robo outroRobo = new Robo(5, sala2);
@@ -203,7 +244,11 @@ public class TestaRobo {
 			
 		}
 		
-		@Test
+    /**
+     *
+     * @throws Exception
+     */
+    @Test
 		public void testaInserirObstaculosNoRobo() throws Exception {
 			Assert.assertFalse(sala.inserirObstaculo(0, 0));
 			robo.andarParaBaixo();
